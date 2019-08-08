@@ -1,0 +1,56 @@
+
+{% extends 'blog/base.html' %}
+{% block content %}
+    <h1 class="text-center">
+        Add Your Houses & Land Now
+    </h1>
+
+    {% if error %}
+      {{ error }}
+      <br>
+      <br>
+    {% endif %}
+
+    {% load staticfiles %}
+
+  <h2 class="text-center">AWAK's Properties</h2>
+
+  <form class="container" action="{% url 'addblog'%}" enctype="multipart-form-data"  method="POST">
+    {% csrf_token %}
+
+    Title:
+    <br />
+    <input type="text" name="title"/>
+    <br />
+
+    Type:<br />
+<select >
+        <option> Land</option>
+      <option></option>
+
+    </select>
+    <br />
+
+    Description:
+      <br />
+      <textarea class="form-control" name="description" rows="2" cols="12"></textarea>
+      <br />
+   Location:
+        <br />
+        <input class="form-control" type="text" name="location"/>
+        <br />
+
+
+      Image:
+            <br />
+            <input type="file" name="image"/>
+            <br />
+
+    <br />
+    <input class="btn btn-primary " type="submit" name="submit" value="Add"/>
+  </form>
+  <br />
+  <br />
+
+
+{% endblock %}
