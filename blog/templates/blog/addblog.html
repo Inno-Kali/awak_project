@@ -11,8 +11,6 @@
       <br>
     {% endif %}
 
-    {% load staticfiles %}
-
   <h2 class="text-center">AWAK's Properties</h2>
 
   <form class="container" action="{% url 'addblog'%}" enctype="multipart-form-data"  method="POST">
@@ -33,16 +31,16 @@
 
     Description:
       <br />
-      <textarea class="form-control" name="description" rows="2" cols="12"></textarea>
+      <textarea class="" name="description" rows="2" cols="12"></textarea>
       <br />
    Location:
         <br />
-        <input class="form-control" type="text" name="location"/>
+        <input class="" type="text" name="location"/>
         <br />
 
 
-      Image:
-            <br />
+  Image:
+          <br />
             <input type="file" name="image"/>
             <br />
 
